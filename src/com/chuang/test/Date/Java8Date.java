@@ -1,4 +1,4 @@
-package com.chuang.test;
+package com.chuang.test.Date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -23,14 +23,15 @@ public class Java8Date {
             //日期
             LocalDate date1 = currentTime.toLocalDate();
             System.out.println("date1: " + date1);
-
+            //获取月，日，秒
             Month month = currentTime.getMonth();
             int day = currentTime.getDayOfMonth();
             int seconds = currentTime.getSecond();
-
             System.out.println("月: " + month + ", 日: " + day + ", 秒: " + seconds);
-
-            LocalDateTime date2 = currentTime.withDayOfMonth(10).withYear(2012);
+            /**
+             * 用一个时间.withXXX(可改变相应的年/月/日)
+             */
+            LocalDateTime date2 = currentTime.withDayOfMonth(10).withMonth(9).withYear(2012);
             System.out.println("date2: " + date2);
 
             // 12 december 2014
